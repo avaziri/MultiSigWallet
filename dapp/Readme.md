@@ -3,6 +3,19 @@ Ethereum Multisignature Wallet UI
 
 A web user interface for the [MultiSigWallet](https://github.com/gnosis/MultiSigWallet).
 
+
+Run From Container
+--------
+'''
+docker build -t multi-sig .
+docker run -p 8282:8282 -it multi-sig
+cd /app/dapp
+npm install #this will fail with an error about hardware wallets but most of the app still works
+grunt
+'''
+Navigate to http://localhost:8282 on your host machine's browser and transact.
+-------
+
 Requirements
 -------------
 * Node v5+ (Confirmed working on v6.17.1 - will not work on current LTS v12.13.0)
